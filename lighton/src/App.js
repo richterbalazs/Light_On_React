@@ -10,10 +10,9 @@ function App() {
     const slista = [...lista];
     slista[adat] = !slista[adat];
     setLista([...slista]);
+    console.log(slista[adat]);
     
-
-    // BE KELL ÁLLíTANI HOGY A HÁTTÉRSZÍN ÁLLITÓDJON A LÁMPÁKBAN
-    
+    // BE KELL ÁLLíTANI HOGY A HÁTTÉRSZÍN ÁLLITÓDJON A LÁMPÁKBAN  
 
   }
 

@@ -18,18 +18,20 @@
   color: #61dafb;
 }
 
-.Lampa{
-  float: left;
-	width: 100px;
-	height: 100px;
-	border: 2px solid black;
-	text-align: center;
-	cursor: pointer;
-  line-height: 10px; 
+.lampa{
+  font-family: "Permanent Marker", cursive;
+  width: 100px;
+  height: 100px;
+  border: 2px solid #000000;
+  cursor: pointer;
+  line-height: 100px;
+  font-size: 60px;
+  margin: 1px;
+  background-color: #5f5f5f96;
   border-radius: 50%;
 }
 
-.jatekTer{
+article{
 display: grid;
 grid-template-columns: repeat(3, auto);
 width: 300px;
@@ -38,17 +40,12 @@ color: #000000;
 margin-top: 20px;
 }
 
-footer {
-  border: 2px solid black;
-  text-align: center;
-  border-radius: 5%;
-}
-
-.le {
+.le{
+  border: 1px solid rgb(0, 0, 0);
   background-color: red;
 }
 
 .fel{
+  border: 1px solid rgb(0, 0, 0);
   background-color: green;
 }
-

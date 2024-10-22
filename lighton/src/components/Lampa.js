@@ -1,9 +1,12 @@
-export default function Lampa(props){
-    function katt(){
-        props.fv(props.index);
-    }
+import React, { useContext } from 'react'
+import { KattContext} from '../context/KattContext.js'
 
-    return (
-        <div className={`Lampa ${props.jel? "fel":"le"}`} onClick={()=>katt()}></div>
+export default function Lampa(props){
+    const {katt}=useContext(KattContext);
+    function kattintas(){
+        katt(props.index)
+    }
+    return(
+        <div className={`lampa ${props.jel? "fel":"le"}`} onClick={()=>kattintas()}></div>
     )
 }

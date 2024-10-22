@@ -1,20 +1,11 @@
 import './App.css';
-import { useState } from 'react';
-import { Jatekter } from './components/Jatekter';
+import React, { useContext } from 'react';
+import Jatekter from './components/Jatekter.js';
+import { KattContext } from './context/KattContext';
 
 
 function App() {
-  const [lista,setLista] = useState([true, true, false, false, true, true, false, false, true]);
-
-  function katt(adat){
-    const slista = [...lista];
-    slista[adat] = !slista[adat];
-    setLista([...slista]);
-    console.log(slista[adat]);
-    
-    // BE KELL ÁLLíTANI HOGY A HÁTTÉRSZÍN ÁLLITÓDJON A LÁMPÁKBAN  
-
-  }
+  const {lista}=useContext(KattContext);
 
   return (
     <div className="App">
@@ -22,7 +13,7 @@ function App() {
           Light On - React
       </header>
       <article>
-        <Jatekter sor={lista} katt={katt}/>
+        <Jatekter lista={lista}/>
       </article>
       <br />
       <footer>Készítette: Richter Balázs</footer>

@@ -1,18 +1,15 @@
+import React from "react"
 import Lampa from "./Lampa.js";
 
-export function Jatekter(props){
-    function katt(adat){
-        console.log("játéktér", adat);
-        props.katt(adat);
-    }
+function Jatekter(props){
 
     return (
-        <div className="jatekTer">
-        {
-            props.sor.map((elem, index) => {
-                return <Lampa jel={elem} key={index} index={index} fv={katt}/>
-            })
-        }
-        </div>
-    )
+        <>
+            {props.lista.map((jel,i)=>{
+                return <Lampa jel={jel} key={i} index={i}/>;
+            })}
+        </>
+    );
 }
+
+export default Jatekter;
